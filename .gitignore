@@ -1,0 +1,19 @@
+node_modules/
+.env
+.env.*
+*.zip
+*.log
+*.bak
+__pycache__/
+*.pyc
+.backup-originales/
+data/cache-catalogo.json
+privado/
+video/out/
+.DS_Store
+Thumbs.db
+
+# Internos: no publicar
+docs/
+video/
+MEJORAS.md

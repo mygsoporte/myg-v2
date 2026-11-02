@@ -1,0 +1,17 @@
+{
+ "Microsoft 365 Business Basic": "Correo profesional, Teams, SharePoint y OneDrive con 1 TB por usuario. Aplicaciones de Office en versión web y móvil.",
+ "Microsoft 365 Business Standard": "Todo lo de Business Basic más las aplicaciones de escritorio de Office: Word, Excel, PowerPoint y Outlook.",
+ "Microsoft 365 Business Premium": "Business Standard más seguridad avanzada: Defender for Business, Intune y acceso condicional.",
+ "Microsoft 365 Apps for business": "Aplicaciones de escritorio de Office y 1 TB en OneDrive, sin correo de Exchange.",
+ "Exchange Online (Plan 1)": "Buzón de correo profesional de 50 GB con calendario y contactos.",
+ "Exchange Online (Plan 2)": "Buzón de 100 GB con archivo de gran capacidad y funciones avanzadas de cumplimiento.",
+ "Microsoft 365 Copilot": "Asistente de IA integrado en Word, Excel, PowerPoint, Outlook y Teams.",
+ "Microsoft 365 Copilot Business": "Copilot para empresas de hasta 300 usuarios, integrado en las aplicaciones de Microsoft 365.",
+ "Microsoft Defender for Office 365 (Plan 1)": "Protección avanzada del correo frente a phishing, enlaces y adjuntos maliciosos.",
+ "Power BI Pro": "Informes y paneles interactivos para analizar y compartir los datos de la empresa.",
+ "Planner and Project Plan 3": "Gestión de proyectos con planificación, recursos y seguimiento.",
+ "Office 365 E3": "Aplicaciones de Office, correo de 100 GB, Teams y herramientas de cumplimiento, sin límite de usuarios.",
+ "Windows Server 2025 Standard - 16 Core License Pack": "Licencia perpetua para servidores físicos o virtuales (paquete de 16 núcleos).",
+ "Microsoft Azure Subscription (Azure Plan)": "Suscripción de Azure con pago por uso: solo pagas los recursos que consumes.",
+ "AWS End-Customer Account Model (ECAM)": "Cuenta de Amazon Web Services gestionada, con facturación según consumo."
+}

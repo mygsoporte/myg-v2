@@ -1,0 +1,5 @@
+Contact: mailto:info@myg.consulting
+Expires: 2027-10-23T00:00:00.000Z
+Preferred-Languages: es, ca, en
+Canonical: https://myg.consulting/.well-known/security.txt
+Policy: https://myg.consulting/legal/aviso-legal.html

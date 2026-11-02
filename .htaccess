@@ -1,0 +1,82 @@
+# ==================================================================
+# M&G Consulting — configuración Apache (Nominalia)
+# Original en .backup-originales/.htaccess (ver MEJORAS.md)
+# ==================================================================
+Options -Indexes -MultiViews
+ServerSignature Off
+DirectoryIndex index.html
+ErrorDocument 404 /404.html
+ErrorDocument 403 /404.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Forzar HTTPS y dominio sin www
+  RewriteCond %{HTTPS} off [OR]
+  RewriteCond %{HTTP_HOST} ^www\. [NC]
+  RewriteRule ^ https://myg.consulting%{REQUEST_URI} [L,R=301]
+
+  # Carpetas internas: nunca públicas (generador, copias de seguridad, documentación, fuentes de vídeo)
+  RewriteRule ^(_build|\.backup-originales|docs|video)(/|$) - [F,L]
+  # Ficheros ocultos (.git, .env…), salvo /.well-known/
+  RewriteRule (^|/)\.(?!well-known(/|$)) - [F,L]
+
+  # Redirecciones 301 desde las URL de WordPress (COMPROBAR slugs reales)
+  RewriteRule ^ciberseguridad/?$            /servicios/ciberseguridad.html [L,R=301]
+  RewriteRule ^cloud/?$                     /servicios/cloud.html [L,R=301]
+  RewriteRule ^microsoft-365/?$             /servicios/microsoft-365.html [L,R=301]
+  RewriteRule ^proyecto-it/?$               /servicios/proyectos-it.html [L,R=301]
+  RewriteRule ^suministro-it/?$             /servicios/suministro-it.html [L,R=301]
+  RewriteRule ^transformacion-digital/?$    /servicios/transformacion-digital.html [L,R=301]
+  RewriteRule ^nosotros/?$                  /nosotros.html [L,R=301]
+  RewriteRule ^contacto/?$                  /contacto.html [L,R=301]
+  RewriteRule ^(wp-admin|wp-login\.php|xmlrpc\.php) - [F,L]
+</IfModule>
+
+# Ficheros que no deben servirse nunca (documentación interna, código fuente, copias, dependencias)
+<FilesMatch "(?i)(\.(md|py|pyc|zip|7z|rar|tar|gz|bak|old|orig|log|sql|map|env|psd|ai|ini|lock)$|^(composer|package(-lock)?)\.json$|^config\.php$)">
+  Require all denied
+</FilesMatch>
+
+# Cabeceras de seguridad
+<IfModule mod_headers.c>
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "DENY"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()"
+  Header always set Cross-Origin-Opener-Policy "same-origin"
+  Header always set Cross-Origin-Resource-Policy "same-origin"
+  Header always set Content-Security-Policy "default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'self'; media-src 'self'; form-action 'self'; frame-ancestors 'none'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests"
+  Header always unset X-Powered-By
+  Header unset X-Powered-By
+</IfModule>
+
+# Compresión
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript image/svg+xml application/json application/manifest+json text/xml application/xml
+</IfModule>
+
+# Caché del navegador
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 hour"
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType application/json "access plus 5 minutes"
+  ExpiresByType application/manifest+json "access plus 1 week"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/avif "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType video/mp4 "access plus 1 month"
+  ExpiresByType video/webm "access plus 1 month"
+</IfModule>
+AddType font/woff2 .woff2
+AddType application/manifest+json .webmanifest
+AddType image/avif .avif
+AddType video/webm .webm

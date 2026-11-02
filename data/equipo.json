@@ -1,0 +1,75 @@
+{
+  "_instrucciones": "Para añadir o quitar a alguien edita solo 'personas' y ejecuta: py _build/build.py. Añade solo a quien haya dado su consentimiento. 'foto' es opcional (ruta relativa, p. ej. assets/img/equipo/nombre.webp); sin foto se muestran las iniciales. 'linkedin' debe ser una URL https de linkedin.com.",
+  "empresa": {
+    "nombre": "M&G Corporate Consulting",
+    "linkedin": "https://www.linkedin.com/company/myg-corporate-consulting/"
+  },
+  "personas": [
+    {
+      "nombre": "Aroa L.",
+      "cargo": "",
+      "linkedin": "https://www.linkedin.com/in/aroa-l-4638a23b4",
+      "foto": "assets/img/equipo/aroa-l.webp"
+    },
+    {
+      "nombre": "Albert Polo",
+      "cargo": "Cloud System Engineer",
+      "linkedin": "https://www.linkedin.com/in/albertpolofernandez/",
+      "foto": "assets/img/equipo/albert-polo.webp"
+    },
+    {
+      "nombre": "Frank Ordoñez",
+      "cargo": "",
+      "linkedin": "https://www.linkedin.com/in/frank-ordo%C3%B1ez-71ba339",
+      "foto": "assets/img/equipo/frank-ordonez.webp"
+    },
+    {
+      "nombre": "Juan Carlos Castellanos Figueira",
+      "cargo": "Ingeniero de Infraestructura IT",
+      "linkedin": "https://www.linkedin.com/in/juan-carlos-castellanos-figueira-4b873831",
+      "foto": "assets/img/equipo/juan-carlos-castellanos-figueira.webp"
+    },
+    {
+      "nombre": "Arnau Fandos V.",
+      "cargo": "Consultor IT",
+      "linkedin": "https://www.linkedin.com/in/arnaufv",
+      "foto": "assets/img/equipo/arnau-fandos-v.webp"
+    },
+    {
+      "nombre": "Gerard Martínez B.",
+      "cargo": "",
+      "linkedin": "https://www.linkedin.com/in/gerardmartinezb",
+      "foto": "assets/img/equipo/gerard-martinez-b.webp"
+    },
+    {
+      "nombre": "Iker Cabello G.",
+      "cargo": "Técnico de Soporte IT Junior",
+      "linkedin": "https://www.linkedin.com/in/ikercabello",
+      "foto": "assets/img/equipo/iker-cabello-g.webp"
+    },
+    {
+      "nombre": "David Verdura López",
+      "cargo": "Consultor IT",
+      "linkedin": "https://www.linkedin.com/in/davidverduralopez",
+      "foto": "assets/img/equipo/david-verdura-lopez.webp"
+    },
+    {
+      "nombre": "Yolanda Moran Avila",
+      "cargo": "Consultor de ventas",
+      "linkedin": "https://www.linkedin.com/in/yolanda-moran-avila-195bb943",
+      "foto": "assets/img/equipo/yolanda-moran-avila.webp"
+    },
+    {
+      "nombre": "Mónica Piquer",
+      "cargo": "",
+      "linkedin": "https://www.linkedin.com/in/monica-piquer-08952813",
+      "foto": "assets/img/equipo/monica-piquer.webp"
+    },
+    {
+      "nombre": "Javier López Moreno",
+      "cargo": "Cloud System Engineer",
+      "linkedin": "https://www.linkedin.com/in/javier-l%C3%B3pez-moreno-a4bb1b174",
+      "foto": "assets/img/equipo/javier-lopez-moreno.webp"
+    }
+  ]
+}

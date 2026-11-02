@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /_build/
+Disallow: /api/
+Disallow: /data/
+Disallow: /contacto.php
+
+Sitemap: https://myg.consulting/sitemap.xml

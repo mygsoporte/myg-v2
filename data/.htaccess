@@ -1,0 +1,4 @@
+# Solo se sirve el JSON público; el resto de la carpeta (CSV, caché) queda protegido
+<FilesMatch "\.(csv|txt|log|bak)$">
+  Require all denied
+</FilesMatch>
