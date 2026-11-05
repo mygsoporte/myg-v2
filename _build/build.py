@@ -1294,6 +1294,13 @@ def build_about():
           <div><dt>Ámbito</dt><dd>Infraestructura local, cloud (Azure, Google Cloud y MCloud) y Microsoft 365</dd></div>
         </dl>
       </div>
+      <div class="wrap">
+        <figure class="office-photo">
+          <img src="assets/img/edificio-barcelona.webp" alt="Edificio de oficinas en la Ronda de Sant Pere, Barcelona, donde está la oficina de M&amp;G" width="1024" height="683" loading="lazy">
+          <figcaption><span class="care-ico">{ICON["pin"]}</span><span><strong>Nuestra oficina en Barcelona</strong>{e(ADDRESS)}</span></figcaption>
+          <small class="photo-credit">Foto: <a href="https://www.flickr.com/photos/yeagovc/25351097037/" target="_blank" rel="noopener noreferrer">yeagov_c / Flickr</a></small>
+        </figure>
+      </div>
     </section>
 
     <section class="section" aria-labelledby="valores-title">
